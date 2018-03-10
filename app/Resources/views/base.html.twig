@@ -1,13 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{% block title %}Test{% endblock %}</title>
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href='{{ asset('bootstrap/css/bootstrap.min.css') }}'>
+    <link rel="stylesheet" href='{{ asset('narrow-jumbotron/narrow-jumbotron.css') }}'>
+    <!-- main -->
+    <link rel="stylesheet" href='{{ asset('css/main.css') }}'>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+ 
+<div class="container">
+    <header class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link {% if (app.request.attributes.get('_route') == 'homepage') %}active{% endif %}" href="/{{ url('homepage') }}?example1=world">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if (app.request.attributes.get('_route') == 'page1') %}active{% endif %}" href="#">Page 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if (app.request.attributes.get('_route') == 'page2') %}active{% endif %}" href="#">Page 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if (app.request.attributes.get('_route') == 'contact') %}active{% endif %}" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">{% block projektName %}Project name{% endblock %}</h3>
+    </header>
+ 
+    {% block body %}{% endblock %}
+</div>
+ 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src='{{ asset('jQuery/jquery-3.2.1.slim.min.js') }}'></script>
+<script src='{{ asset('popper/popper.min.js') }}'></script>
+<script src='{{ asset('bootstrap/js/bootstrap.min.js') }}'></script>
+{% block javascripts %}{% endblock %}
+ 
+</body>
 </html>
