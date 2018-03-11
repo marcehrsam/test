@@ -1,3 +1,10 @@
+todo:
+git auschecken
+-> composer install
+
+
+symfony new <name> [version]
+
 cd <projekt>
 
 db erstellen
