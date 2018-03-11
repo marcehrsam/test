@@ -1,3 +1,8 @@
+tarifrechner:
+    resource: "@TarifrechnerBundle/Controller/"
+    type:     annotation
+    prefix:   /rechner
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

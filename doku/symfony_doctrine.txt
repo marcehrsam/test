@@ -1,11 +1,16 @@
 todo:
+
 git auschecken
+
+cd <projekt>
+
 -> composer install
+
+symfony versionsupdate
+composer update
 
 
 symfony new <name> [version]
-
-cd <projekt>
 
 db erstellen
 php bin/console doctrine:database:create
