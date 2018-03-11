@@ -1,0 +1,19 @@
+cd <projekt>
+
+db erstellen
+php bin/console doctrine:database:create
+
+schema erstellen
+php bin/console doctrine:schema:create
+
+entität generieren
+php bin/console doctrine:generate:entity
+
+mapping anzeigen + prüfen
+php bin/console "doctrine:mapping:info"
+
+schema prüfen
+php bin/console doctrine:schema:validate
+
+schema schreiben
+php bin/console doctrine:schema:update --force

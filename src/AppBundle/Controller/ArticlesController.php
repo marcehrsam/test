@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use AppBundle\Entity\Bla;
 
 class ArticlesController extends Controller
 {
@@ -26,6 +27,9 @@ class ArticlesController extends Controller
      */
     public function page2Action()
     {
+        
+        
+        
         return $this->render('@App/Articles/page2.html.twig',
             array(
                 // ...
