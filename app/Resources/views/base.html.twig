@@ -33,12 +33,12 @@
                            href='{{ path('page2') }}'>Page 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if (app.request.attributes.get('_route') == 'contact') %}active{% endif %}"
-                           href='#contact'>Contact</a>
+                        <a class="nav-link {% if (app.request.attributes.get('_route') == 'rechner') %}active{% endif %}"
+                           href='{{ path('tarife') }}'>Tarifrechner</a>
                     </li>
                 </ul>
             </nav>
-            <h3 class="text-muted">{% block projektName %}Project name{% endblock %}</h3>
+            <h3 class="text-muted">{% block projektName %}DBB Tarifrechner{% endblock %}</h3>
         </header>
 
     {% block body %}{% endblock %}
