@@ -36,6 +36,10 @@
                         <a class="nav-link {% if (app.request.attributes.get('_route') == 'rechner') %}active{% endif %}"
                            href='{{ path('tarife') }}'>Tarifrechner</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if (app.request.attributes.get('_route') == 'page3') %}active{% endif %}"
+                           href='{{ path('p3') }}'>TR Seite 1</a>
+                    </li>
                 </ul>
             </nav>
             <h3 class="text-muted">{% block projektName %}DBB Tarifrechner{% endblock %}</h3>
