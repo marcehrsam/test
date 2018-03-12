@@ -11,12 +11,17 @@ HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]gi
 sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:$(whoami):rwX var
 sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:$(whoami):rwX var
 
+(symfony versionsupdate
+composer update )
 
-symfony versionsupdate
-composer update
-
-
+neues Projekt anlegen:
 symfony new <name> [version]
+
+neues AppBundle anlegen (interaktiv)
+bin/console generate:bundle
+
+neuen Controller erzeugen (interaktiv)
+bin/console generate:controller
 
 db erstellen
 php bin/console doctrine:database:create
