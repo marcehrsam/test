@@ -6,8 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
 
 class MyController extends Controller
 {
@@ -28,6 +29,12 @@ class MyController extends Controller
         
         //Formular bauen
         $form = $this->createFormBuilder()
+                ->add('tv', ChoiceType::class, array(
+                    'choices' => array(
+                        'TV-L 2012' => '1',
+                        'TV-L 2019' => '2',
+                    )
+                ))
                 ->add('bezeichnung', TextType::class)
                 ->add('save', SubmitType::class, array('label' => 'Speichern'))
                 ->getForm();
