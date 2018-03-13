@@ -29,7 +29,7 @@ class MyController extends Controller
         
         //Formular bauen
         $form = $this->createFormBuilder()
-                ->add('tv', ChoiceType::class, array(
+                ->add('tarifvertrag', ChoiceType::class, array(
                     'choices' => array(
                         'TV-L 2012' => '1',
                         'TV-L 2019' => '2',
