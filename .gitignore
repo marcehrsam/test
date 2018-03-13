@@ -18,3 +18,9 @@
 /startserver.bat
 /nbproject/private/
 /nbproject
+/.idea/deployment.xml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/test.iml
+/.idea/vcs.xml
+/.idea/workspace.xml
